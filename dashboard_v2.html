@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FitMorph Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3c83f6",
+                        "accent-green": "#22c55e",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0a0f16",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .neon-glow-blue {
+            box-shadow: 0 0 15px rgba(60, 131, 246, 0.4);
+        }
+        .neon-glow-green {
+            box-shadow: 0 0 15px rgba(34, 197, 94, 0.4);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Top Navigation / Greeting -->
+<header class="flex items-center justify-between p-6 pt-8">
+<div class="flex items-center gap-4">
+<div class="relative">
+<div class="size-12 rounded-full border-2 border-primary p-0.5">
+<img alt="User Profile" class="rounded-full size-full object-cover" data-alt="Close up portrait of a smiling athletic man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh2TRO2Qve--9d14he6e3-reZtGMlsMw_uVVimAFiV9xTOG2xNTbn_I9YZHIblovZqzgm-JkzfgiVt4nKn5klbEDY6zk0KCBQBZFunn_7lv8kWaNcv-6t7Kr3SpwhjodttD5VULur7jNvVrkIPHwcMQ7ec2Q8sVxiHfahAnDHgRaX8zvqLEYd5Ct4RHdqav4vz97JE4VeYWaiQL-GuUUngQFgtvalUrSHf6Ku5BfNEIuiF_Jxl79dyOsVuyq6qijh23QaZwG587Hc"/>
+</div>
+<div class="absolute bottom-0 right-0 size-3 bg-accent-green rounded-full border-2 border-background-dark"></div>
+</div>
+<div>
+<p class="text-slate-400 text-xs font-medium uppercase tracking-wider">Welcome back</p>
+<h1 class="text-xl font-bold">Good Morning, Rahul</h1>
+</div>
+</div>
+<button class="size-10 flex items-center justify-center glass-card rounded-lg text-slate-300">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</header>
+<!-- Stats Grid -->
+<section class="grid grid-cols-3 gap-3 px-6 py-4">
+<div class="glass-card p-4 rounded-xl flex flex-col gap-1 border-b-2 border-b-primary/50">
+<span class="material-symbols-outlined text-primary text-xl">local_fire_department</span>
+<p class="text-[10px] text-slate-400 font-medium mt-1">CALORIES</p>
+<p class="text-lg font-bold">850</p>
+<p class="text-[10px] text-accent-green font-bold">+15%</p>
+</div>
+<div class="glass-card p-4 rounded-xl flex flex-col gap-1 border-b-2 border-b-accent-green/50">
+<span class="material-symbols-outlined text-accent-green text-xl">bolt</span>
+<p class="text-[10px] text-slate-400 font-medium mt-1">STREAK</p>
+<p class="text-lg font-bold">12 Days</p>
+<p class="text-[10px] text-accent-green font-bold">+2</p>
+</div>
+<div class="glass-card p-4 rounded-xl flex flex-col gap-1 border-b-2 border-b-primary/50">
+<span class="material-symbols-outlined text-primary text-xl">footprint</span>
+<p class="text-[10px] text-slate-400 font-medium mt-1">STEPS</p>
+<p class="text-lg font-bold">8,432</p>
+<p class="text-[10px] text-accent-green font-bold">+8%</p>
+</div>
+</section>
+<!-- Central Interactive Avatar Section -->
+<main class="flex-1 relative flex flex-col items-center justify-center py-4 px-6 overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none"></div>
+<!-- Muscle Focus Labels -->
+<div class="absolute top-10 left-10 glass-card px-3 py-1.5 rounded-full flex items-center gap-2">
+<div class="size-2 rounded-full bg-accent-green neon-glow-green"></div>
+<span class="text-xs font-semibold">Chest: Rested</span>
+</div>
+<div class="absolute top-32 right-8 glass-card px-3 py-1.5 rounded-full flex items-center gap-2">
+<div class="size-2 rounded-full bg-primary neon-glow-blue"></div>
+<span class="text-xs font-semibold">Back: High Fatigue</span>
+</div>
+<!-- Placeholder for 3D Avatar Area -->
+<div class="relative w-full aspect-[4/5] flex items-center justify-center">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(60,131,246,0.15)_0%,transparent_70%)]"></div>
+<!-- Illustration representing the 3D Avatar -->
+<div class="z-10 w-full h-full flex items-center justify-center opacity-80 mix-blend-lighten">
+<img alt="3D Muscle Model" class="h-full object-contain grayscale invert brightness-150" data-alt="Minimalist 3D anatomical human figure with glowing blue muscle highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChZ2Y7iLSjt-u8w9pP8K5NVvuIyby9S7n44ZKJJt8CEeuBHJDrgNRTmo7Pergy0zYrZmjqLNGhahHC4UXFq3ftbLgCIiYbHyTEx5NH9URTTCHPAOvg04RxC5B7J-sdMYs7xLWRE3rcSWitDCVYfPFXNNb1QJga7SEygJNcAsQ2nHLett5Cpm-xKmv4SKeAOtzaW9IHvCEm_TsvKoDnc4PgJNOiUo1uD8yhWAiKctgRq7qGSDTzSAjBOw4G_iqDGTAPDQUwgV2_Wj0"/>
+</div>
+<!-- Target Highlight -->
+<div class="absolute top-[40%] left-[55%] size-20 bg-primary/20 rounded-full blur-2xl animate-pulse"></div>
+</div>
+<!-- Body Focus Badge -->
+<div class="mt-4 glass-card px-6 py-2 rounded-full flex items-center gap-3">
+<p class="text-xs font-bold text-slate-300 uppercase tracking-widest">Focus Zone:</p>
+<span class="text-sm font-black text-primary uppercase">Upper Posterior</span>
+</div>
+</main>
+<!-- Bottom Protocol Section -->
+<section class="p-6 pb-24">
+<div class="glass-card p-5 rounded-2xl flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-slate-400 text-xs font-bold uppercase tracking-widest">Today's Protocol</h3>
+<p class="text-xl font-bold mt-1">Hypertrophy Session</p>
+</div>
+<div class="bg-primary/20 text-primary px-3 py-1 rounded-lg text-xs font-bold">
+                    65 Min
+                </div>
+</div>
+<div class="flex gap-2">
+<div class="flex -space-x-2">
+<div class="size-6 rounded-full border border-background-dark bg-slate-800 flex items-center justify-center text-[10px] font-bold">DB</div>
+<div class="size-6 rounded-full border border-background-dark bg-slate-800 flex items-center justify-center text-[10px] font-bold">BB</div>
+<div class="size-6 rounded-full border border-background-dark bg-slate-800 flex items-center justify-center text-[10px] font-bold">C</div>
+</div>
+<p class="text-xs text-slate-400 flex items-center">Dumbbells, Barbells, Cable Focus</p>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 neon-glow-blue transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined fill-1">play_arrow</span>
+                START WORKOUT
+            </button>
+</div>
+</section>
+<!-- Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-background-dark/80 backdrop-blur-xl border-t border-slate-800 px-6 py-4 flex justify-between items-center z-50">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-1">grid_view</span>
+<span class="text-[10px] font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="text-[10px] font-bold">Plan</span>
+</a>
+<div class="relative -top-8">
+<button class="size-14 bg-accent-green text-background-dark rounded-full flex items-center justify-center neon-glow-green border-4 border-background-dark shadow-2xl">
+<span class="material-symbols-outlined text-3xl font-bold">add</span>
+</button>
+</div>
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined">insights</span>
+<span class="text-[10px] font-bold">Stats</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold">Profile</span>
+</a>
+</nav>
+</body></html>
