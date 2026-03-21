@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FitMorph Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3c83f6",
+                        "accent-green": "#0bda5e",
+                        "accent-blue": "#00f2ff",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0a0f18",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .neon-glow-blue {
+            box-shadow: 0 0 15px rgba(60, 131, 246, 0.4);
+        }
+        .neon-glow-green {
+            box-shadow: 0 0 15px rgba(11, 218, 94, 0.3);
+        }
+        .muscle-highlight {
+            filter: drop-shadow(0 0 8px #00f2ff);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen pb-24">
+<!-- Header Section -->
+<header class="flex items-center justify-between p-6 sticky top-0 z-50 bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center gap-4">
+<div class="relative">
+<div class="size-12 rounded-full overflow-hidden border-2 border-primary/50">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close up portrait of a smiling athletic man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcwpv9PBoTabm7H4swfpWmfQ8KIVmp2muzYMWtoCAUOoK62c1IbFjEOqQjdOF_loPFYW17U-f37G8Db1nIEUKgX7PWM1TcSO5qyYN3gvvSbMRkMMhDyx0zzRNbvbS5X_XI8qZgqiyS7IhoSft3aNeNhelyaK125DDanV8QnNdsa95Lzv9sIDrt1tJLYCmgA-uaTB2hpwpa8JCiuz7OD0OUAp5ZpyXVZVTAxe0XIvzxYgviAFbjOOeOEhH-AFia2anU9rziuI1z_bE"/>
+</div>
+<div class="absolute bottom-0 right-0 size-3 bg-accent-green rounded-full border-2 border-background-dark"></div>
+</div>
+<div>
+<p class="text-slate-400 text-xs font-medium uppercase tracking-widest">Welcome back</p>
+<h1 class="text-xl font-bold">Good Morning, Rahul</h1>
+</div>
+</div>
+<button class="size-10 glass-card rounded-full flex items-center justify-center text-slate-300 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</header>
+<main class="px-6 space-y-8">
+<!-- Daily Summary Grid -->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="glass-card p-4 rounded-xl space-y-2">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary">local_fire_department</span>
+<span class="text-accent-green text-[10px] font-bold">+12%</span>
+</div>
+<div>
+<p class="text-2xl font-bold tracking-tight">850</p>
+<p class="text-slate-400 text-xs">Calories burned</p>
+</div>
+</div>
+<div class="glass-card p-4 rounded-xl space-y-2">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-orange-500">bolt</span>
+<span class="text-slate-500 text-[10px] font-bold">MAX</span>
+</div>
+<div>
+<p class="text-2xl font-bold tracking-tight">12</p>
+<p class="text-slate-400 text-xs">Day streak</p>
+</div>
+</div>
+<div class="glass-card p-4 rounded-xl space-y-2">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-accent-blue">schedule</span>
+<span class="text-accent-blue text-[10px] font-bold">PM</span>
+</div>
+<div>
+<p class="text-2xl font-bold tracking-tight">45</p>
+<p class="text-slate-400 text-xs">Mins today</p>
+</div>
+</div>
+<div class="glass-card p-4 rounded-xl space-y-2">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-accent-green">footprint</span>
+<span class="text-red-500 text-[10px] font-bold">-5%</span>
+</div>
+<div>
+<p class="text-2xl font-bold tracking-tight">8,432</p>
+<p class="text-slate-400 text-xs">Daily steps</p>
+</div>
+</div>
+</div>
+<!-- 3D Avatar Muscle Focus Section -->
+<section class="relative">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-lg font-bold">Body Focus</h2>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-primary/20 text-primary text-[10px] font-bold rounded-full uppercase tracking-wider">Upper Body</span>
+</div>
+</div>
+<div class="glass-card rounded-2xl p-8 aspect-[4/5] flex flex-col items-center justify-center relative overflow-hidden">
+<!-- Background Glows -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/10 rounded-full blur-[80px]"></div>
+<!-- Interactive Avatar Placeholder -->
+<div class="relative z-10 w-full h-full flex items-center justify-center">
+<img alt="Anatomy Model" class="h-full object-contain opacity-80 mix-blend-screen grayscale contrast-125" data-alt="3D medical illustration of a human muscular system showing front profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLprQbqMjmCa1TlnyPp_bzX3fPJiVO8ZJmqXOX7xNAsvUBlextH748t8EQ5rY8AIPsTU_EpEBzWXIs3IE6GSl9g2XxoClNMhe8LXV1zHCOeL07ch1C-_u4WZGHGEmRNhAO1dcXa_jOHNgImtungAHV89-tSsN3Gw4Pk5ztBj-1kl6xB9FFaVuiKYTs-uhBdhocdPtc_oIQHdwjc3TVXxjM8WlrhAnJ3rx2N4CKyARMctR02h5PSs-VAtJLIU3lfo9c6CMjcQcp8Sg"/>
+<!-- Hotspots/Muscle Highlights -->
+<div class="absolute top-[30%] left-[45%] size-4 bg-accent-blue/40 border border-accent-blue rounded-full animate-pulse flex items-center justify-center">
+<div class="size-1 bg-accent-blue rounded-full"></div>
+</div>
+<div class="absolute top-[45%] left-[35%] size-4 bg-accent-green/40 border border-accent-green rounded-full flex items-center justify-center">
+<div class="size-1 bg-accent-green rounded-full"></div>
+</div>
+<!-- Tooltip Style Label -->
+<div class="absolute top-[28%] right-[15%] glass-card px-3 py-1.5 rounded-lg border-accent-blue/50">
+<p class="text-[10px] font-bold text-accent-blue uppercase tracking-tighter">Pectorals</p>
+<p class="text-[8px] text-slate-400 leading-none">High fatigue</p>
+</div>
+</div>
+<!-- Bottom Stats -->
+<div class="absolute bottom-6 left-6 right-6 flex justify-between">
+<div class="text-center">
+<p class="text-slate-400 text-[10px] uppercase font-bold tracking-widest">Strength</p>
+<p class="text-lg font-bold text-accent-blue">84%</p>
+</div>
+<div class="text-center">
+<p class="text-slate-400 text-[10px] uppercase font-bold tracking-widest">Recovery</p>
+<p class="text-lg font-bold text-accent-green">62%</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Workout Plan Card -->
+<section class="pb-8">
+<h2 class="text-lg font-bold mb-4">Today's Protocol</h2>
+<div class="bg-gradient-to-br from-primary/20 to-accent-blue/10 border border-primary/30 rounded-2xl p-6 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-8xl">fitness_center</span>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-sm">timer</span>
+<span class="text-xs font-semibold text-primary">Chest &amp; Triceps Mastery</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">Hypertrophy Session</h3>
+<div class="space-y-3 mb-6">
+<div class="flex items-center gap-3">
+<div class="size-2 bg-accent-green rounded-full"></div>
+<span class="text-sm text-slate-300">Bench Press: 4 sets x 10 reps</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="size-2 bg-accent-green rounded-full"></div>
+<span class="text-sm text-slate-300">Incline Dumbbell Fly: 3 sets x 12 reps</span>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg neon-glow-blue transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined">play_arrow</span>
+                        START WORKOUT
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-background-dark/95 border-t border-slate-800/50 backdrop-blur-xl z-50 px-4 pb-6 pt-2">
+<div class="flex items-center justify-around">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined font-fill text-[28px]">home</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 hover:text-slate-300 transition-colors" href="#">
+<span class="material-symbols-outlined text-[28px]">fitness_center</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Workouts</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 hover:text-slate-300 transition-colors" href="#">
+<span class="material-symbols-outlined text-[28px]">nutrition</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Nutrition</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 hover:text-slate-300 transition-colors" href="#">
+<span class="material-symbols-outlined text-[28px]">person</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>
